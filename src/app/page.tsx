@@ -47,15 +47,16 @@ function GameShell() {
       </div>
 
       <nav className="h-32 bg-slate-900 border-t border-slate-800 flex flex-col shrink-0 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] z-20">
-        <div className="h-10 border-b border-white/5 flex items-center px-8 gap-4 overflow-x-auto no-scrollbar">
-          <span className="text-[9px] font-black text-slate-500 uppercase flex items-center gap-1"><Boxes size={12}/> Recursos:</span>
-          <div className="flex gap-3 text-[10px] font-bold tabular-nums">
+        <div className="h-10 border-b border-white/5 flex items-center px-4 gap-4 overflow-x-auto no-scrollbar">
+          <span className="text-[9px] font-black text-slate-500 uppercase flex items-center gap-1 shrink-0"><Boxes size={12}/> Inventário:</span>
+          <div className="flex gap-4 text-[10px] font-bold tabular-nums shrink-0">
+            <span className="text-stone-400">🪨 {inventory.terra || 0}</span>
             <span className="text-orange-400">⬛ {inventory.carvao}</span>
             <span className="text-slate-300">⚪ {inventory.ferro}</span>
             <span className="text-yellow-500">🟡 {inventory.ouro}</span>
-            {Object.entries(refinedBars).map(([id, q]: any) => (
-              <span key={id} className="text-orange-500">🔥 {q} {id === 'ferro' ? '⚪' : '🟡'}</span>
-            ))}
+            <span className="text-blue-300">⚙️ {inventory.pecas_robo || 0}</span>
+            <span className="text-emerald-300">🛡️ {inventory.pecas_defesa || 0}</span>
+            <span className="text-purple-400">🏺 {inventory.item_antigo || 0}</span>
           </div>
         </div>
 
