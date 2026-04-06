@@ -9,6 +9,7 @@ import Mapa from '../components/game/Mapa';
 import Refinaria from '../components/game/Refinaria';
 import BaseScreen from '../components/game/BaseScreen';
 import DeckScreen from '../components/game/DeckScreen';
+import Loja from '../components/game/Loja';
 
 function GameShell() {
   const [activeTab, setActiveTab] = useState<'base' | 'mapa' | 'refinaria' | 'loja' | 'deck'>('base');
@@ -25,7 +26,7 @@ function GameShell() {
           <button 
             onClick={() => { 
               setGold((g: number) => g + 5000); 
-              setInventory((i: any) => ({ ...i, carvao: 50, ferro: 50, ouro: 20 })); 
+              setInventory((i: any) => ({ ...i, carvao: 50, ferro: 50, ouro: 20, pecas_robo: 50, terra: 100 })); 
               setRefinedBars((r: any) => ({ ...r, ferro: (r.ferro || 0) + 10, ouro: (r.ouro || 0) + 5 }));
             }} 
             className="bg-emerald-600 px-3 py-1.5 rounded-xl font-black text-[9px] uppercase tracking-tighter hover:bg-emerald-500 transition-colors shadow-[0_0_15px_rgba(16,185,129,0.5)]"
@@ -41,8 +42,7 @@ function GameShell() {
           {activeTab === 'mapa' && <motion.div key="mapa" className="h-full" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }}><Mapa /></motion.div>}
           {activeTab === 'refinaria' && <motion.div key="ref" className="h-full" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}><Refinaria /></motion.div>}
           {activeTab === 'deck' && <motion.div key="deck" className="h-full" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}><DeckScreen /></motion.div>}
-          
-          {activeTab === 'loja' && <div className="h-full flex items-center justify-center font-black uppercase text-slate-700">Loja em breve</div>}
+          {activeTab === 'loja' && <motion.div key="loja" className="h-full" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}><Loja /></motion.div>}
         </AnimatePresence>
       </div>
 
@@ -63,8 +63,8 @@ function GameShell() {
         <div className="flex-1 flex justify-around items-center px-4">
           <NavBtn id="base" icon={<Home />} label="Base" active={activeTab === 'base'} onClick={setActiveTab} />
           <NavBtn id="mapa" icon={<MapIcon />} label="Mapa" active={activeTab === 'mapa'} onClick={setActiveTab} />
-          <NavBtn id="refinaria" icon={<Flame />} label="Refinar" active={activeTab === 'refinaria'} onClick={setActiveTab} />
-          <NavBtn id="loja" icon={<Store />} label="Loja" active={activeTab === 'loja'} onClick={setActiveTab} />
+          <NavBtn id="refinaria" icon={<Flame />} label="Fábrica" active={activeTab === 'refinaria'} onClick={setActiveTab} />
+          <NavBtn id="loja" icon={<Store />} label="Mercado" active={activeTab === 'loja'} onClick={setActiveTab} />
           <NavBtn id="deck" icon={<Layers />} label="Cards" active={activeTab === 'deck'} onClick={setActiveTab} />
         </div>
       </nav>
