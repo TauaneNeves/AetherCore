@@ -1,8 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Leaf } from 'lucide-react';
-import { AssetTowerBuilding, AssetCoreBuilding, AssetForcefieldBuilding, AssetPoeiraVital, AssetFragmentoRunico } from './GameAssets';
+import { AssetTowerBuilding, AssetCoreBuilding, AssetForcefieldBuilding, AssetPoeiraVital, AssetFragmentoRunico, AssetSparkles } from './GameAssets';
 
 export const CoreVisual = ({ level, isHit }: { level: number, isHit: boolean }) => (
   <motion.div animate={isHit ? { x: [-10, 10, -10, 0] } : {}} className="relative flex flex-col items-center">
@@ -25,9 +24,9 @@ export const TowerVisual = ({ level, isShooting }: { level: number, isShooting: 
              <motion.div 
                 initial={{ opacity: 0, scale: 0 }} 
                 animate={{ opacity: [0, 1, 0], scale: [0, 2.5, 0] }} 
-                className="absolute -top-10 left-1/2 -translate-x-1/2 text-4xl pointer-events-none drop-shadow-lg"
+                className="absolute -top-10 left-1/2 -translate-x-1/2 text-4xl pointer-events-none drop-shadow-lg flex items-center justify-center"
              >
-                ✨
+                <AssetSparkles className="w-8 h-8 text-yellow-400" />
              </motion.div>
          )}
          <AssetTowerBuilding className="w-32 h-32 drop-shadow-[0_0_15px_rgba(45,212,191,0.3)]" />
@@ -60,9 +59,9 @@ export const ShieldVisual = ({ level, isHit }: { level: number, isHit: boolean }
 
 export const UpgradeButton = ({ title, level, iconType, color, gold, resource, resourceType, onClick }: any) => {
   const colors: any = {
-    emerald: 'bg-purple-800 border-purple-950 shadow-[0_6px_0_#3b0764] text-purple-200',
-    red: 'bg-teal-800 border-teal-950 shadow-[0_6px_0_#042f2e] text-teal-200',
-    blue: 'bg-cyan-800 border-cyan-950 shadow-[0_6px_0_#164e63] text-cyan-200',
+    emerald: 'bg-purple-800 border-purple-950 shadow-[0_6px_0_#3b0764] text-purple-200 hover:bg-purple-700',
+    red: 'bg-teal-800 border-teal-950 shadow-[0_6px_0_#042f2e] text-teal-200 hover:bg-teal-700',
+    blue: 'bg-cyan-800 border-cyan-950 shadow-[0_6px_0_#164e63] text-cyan-200 hover:bg-cyan-700',
   };
 
   return (
@@ -76,7 +75,7 @@ export const UpgradeButton = ({ title, level, iconType, color, gold, resource, r
         <span className="opacity-30">|</span>
         <span className="flex items-center gap-1"><AssetFragmentoRunico className="w-4 h-4"/> {resource}</span>
       </div>
-      <Leaf size={14} className="mt-3 opacity-50 group-hover:rotate-12 transition-transform" />
+      <AssetSparkles className="w-4 h-4 mt-3 opacity-50 group-hover:rotate-12 transition-transform" />
     </button>
   );
 };

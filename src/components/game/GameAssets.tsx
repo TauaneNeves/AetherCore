@@ -1,140 +1,61 @@
 "use client";
 import React from 'react';
 
-// --- RECURSOS DO INVENTÁRIO (CRYSTAL-PUNK) ---
+// --- RECURSOS DO INVENTÁRIO ---
+export const AssetPoeiraVital = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="40" fill="url(#glowPoeira)" opacity="0.6"/><path d="M50 15 L56 44 L85 50 L56 56 L50 85 L44 56 L15 50 L44 44 Z" fill="#d8b4fe" /><path d="M50 28 L53 47 L72 50 L53 53 L50 72 L47 53 L28 50 L47 47 Z" fill="#ffffff" /><circle cx="25" cy="25" r="4" fill="#e9d5ff" className="animate-ping" style={{ animationDuration: '2s' }}/><circle cx="75" cy="80" r="3" fill="#e9d5ff" className="animate-pulse" /><defs><radialGradient id="glowPoeira"><stop offset="0%" stopColor="#a855f7" /><stop offset="100%" stopColor="transparent" /></radialGradient></defs></svg>);
+export const AssetEssenciaSombria = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="45" fill="#0f172a" /><path d="M50 10 C 70 10 90 30 90 50 C 90 60 80 65 75 55 C 70 45 60 30 50 30 C 40 30 30 45 25 55 C 20 65 10 60 10 50 Z" fill="#1e1b4b" className="animate-pulse" /><circle cx="50" cy="50" r="15" fill="#020617" stroke="#4c1d95" strokeWidth="2"/></svg>);
+export const AssetCristalAether = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="35" fill="#2dd4bf" opacity="0.2"/><polygon points="50,10 75,40 50,90 25,40" fill="#2dd4bf" stroke="#042f2e" strokeWidth="3"/><polygon points="50,10 50,90 25,40" fill="#14b8a6" opacity="0.7"/><polygon points="45,25 50,15 50,45 45,45" fill="#ccfbf1" opacity="0.9"/></svg>);
+export const AssetFragmentoRunico = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="20,30 50,10 80,30 85,70 50,90 15,70" fill="#334155" stroke="#0f172a" strokeWidth="4"/><polygon points="20,30 50,10 50,90 15,70" fill="#1e293b" opacity="0.6"/><path d="M40 35 L60 35 L45 65 L65 65" fill="none" stroke="#2dd4bf" strokeWidth="5" strokeLinecap="round" className="animate-pulse"/></svg>);
+export const AssetMusgo = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M15 60 Q 50 40 85 60 Q 90 85 50 90 Q 10 85 15 60 Z" fill="#064e3b"/><path d="M10 55 Q 30 30 50 45 T 90 55 Q 70 70 50 60 T 10 55 Z" fill="#059669"/><circle cx="30" cy="48" r="3" fill="#a7f3d0" className="animate-pulse"/></svg>);
+export const AssetNucleoGolem = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="40" fill="#022c22" stroke="#0f766e" strokeWidth="4"/><path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="#14b8a6"/><circle cx="50" cy="50" r="8" fill="#a855f7" className="animate-pulse"/></svg>);
+export const AssetSeloDefesa = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M20 20 L80 20 L80 50 C80 80 50 95 50 95 C50 95 20 80 20 50 Z" fill="#0f766e" stroke="#042f2e" strokeWidth="5"/><path d="M30 30 L70 30 L50 80 Z" fill="#14b8a6"/><circle cx="50" cy="45" r="10" fill="#ccfbf1" className="animate-pulse"/></svg>);
+export const AssetReliquia = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,10 80,30 80,70 50,90 20,70 20,30" fill="#1e1b4b" stroke="#7e22ce" strokeWidth="4"/><circle cx="50" cy="40" r="5" fill="#a855f7" className="animate-ping" style={{ animationDuration: '2.5s' }}/><polygon points="45,65 55,65 50,75" fill="#c084fc"/></svg>);
 
-export const AssetPoeiraVital = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <circle cx="50" cy="50" r="40" fill="url(#glowPoeira)" opacity="0.6"/>
-    <path d="M50 15 L56 44 L85 50 L56 56 L50 85 L44 56 L15 50 L44 44 Z" fill="#d8b4fe" />
-    <path d="M50 28 L53 47 L72 50 L53 53 L50 72 L47 53 L28 50 L47 47 Z" fill="#ffffff" />
-    <circle cx="25" cy="25" r="4" fill="#e9d5ff" className="animate-ping" style={{ animationDuration: '2s' }}/>
-    <circle cx="75" cy="80" r="3" fill="#e9d5ff" className="animate-pulse" />
-    <circle cx="80" cy="30" r="5" fill="#e9d5ff" className="animate-pulse" style={{ animationDelay: '0.5s' }}/>
-    <defs>
-      <radialGradient id="glowPoeira">
-        <stop offset="0%" stopColor="#a855f7" />
-        <stop offset="100%" stopColor="transparent" />
-      </radialGradient>
-    </defs>
-  </svg>
-);
+// --- ELEMENTOS E STATUS ---
+export const AssetFire = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M50 10 C 80 40 80 70 50 90 C 20 70 20 40 50 10 Z" fill="#f97316"/></svg>);
+export const AssetWater = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M50 10 Q 80 50 80 75 A 30 30 0 1 1 20 75 Q 20 50 50 10 Z" fill="#0ea5e9"/></svg>);
+export const AssetEarthElem = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,10 85,35 85,75 50,95 15,75 15,35" fill="#2dd4bf"/></svg>);
+export const AssetAir = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="30" fill="none" stroke="#c084fc" strokeWidth="12" strokeDasharray="15 10" className="animate-spin-slow"/></svg>);
+export const AssetIconATK = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M20 80 L80 20 M20 20 L80 80" stroke="currentColor" strokeWidth="15" strokeLinecap="round"/><circle cx="50" cy="50" r="10" fill="currentColor"/></svg>);
+export const AssetIconHP = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M50 90 L15 50 A25 25 0 0 1 50 20 A25 25 0 0 1 85 50 Z" fill="currentColor"/></svg>);
+export const AssetIconEffect = ({ className = "w-4 h-4" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,10 65,40 95,50 65,60 50,90 35,60 5,50 35,40" fill="currentColor"/></svg>);
 
-export const AssetEssenciaSombria = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <circle cx="50" cy="50" r="45" fill="#0f172a" />
-    <path d="M50 10 C 70 10 90 30 90 50 C 90 60 80 65 75 55 C 70 45 60 30 50 30 C 40 30 30 45 25 55 C 20 65 10 60 10 50 C 10 30 30 10 50 10 Z" fill="#1e1b4b" className="animate-pulse" />
-    <path d="M50 90 C 30 90 10 70 10 50 C 10 40 20 35 25 45 C 30 55 40 70 50 70 C 60 70 70 55 75 45 C 80 35 90 40 90 50 C 90 70 70 90 50 90 Z" fill="#312e81" className="animate-pulse" style={{ animationDelay: '0.3s' }}/>
-    <circle cx="50" cy="50" r="15" fill="#020617" stroke="#4c1d95" strokeWidth="2"/>
-  </svg>
-);
+// --- 🦸‍♂️ PERSONAGENS (HERÓIS) SVG 🦸‍♀️ ---
+export const AssetCharQuartz = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,10 80,40 60,90 40,90 20,40" fill="#0f766e" stroke="#042f2e" strokeWidth="4"/><polygon points="50,20 70,45 55,80 45,80 30,45" fill="#2dd4bf"/><polygon points="40,30 50,20 60,30 50,50" fill="#ccfbf1" opacity="0.8"/></svg>);
+export const AssetCharAether = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,5 90,50 50,95 10,50" fill="#7e22ce" stroke="#3b0764" strokeWidth="4"/><polygon points="50,15 75,50 50,85 25,50" fill="#c084fc"/><path d="M40 40 L50 25 L60 40 L50 70 Z" fill="#f3e8ff"/></svg>);
+export const AssetCharNeon = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M50 10 Q 90 40 70 90 Q 50 70 30 90 Q 10 40 50 10 Z" fill="#be185d" stroke="#4c0519" strokeWidth="4"/><path d="M50 30 Q 70 50 60 80 Q 50 65 40 80 Q 30 50 50 30 Z" fill="#f43f5e"/><circle cx="50" cy="55" r="8" fill="#fda4af" className="animate-pulse"/></svg>);
+export const AssetCharTide = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="40" fill="#0369a1" stroke="#082f49" strokeWidth="4"/><path d="M20 50 Q 50 20 80 50 Q 50 80 20 50 Z" fill="#38bdf8"/><circle cx="50" cy="50" r="12" fill="#e0f2fe" className="animate-pulse"/></svg>);
+export const AssetCharOnyx = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><rect x="20" y="20" width="60" height="70" rx="10" fill="#1e293b" stroke="#020617" strokeWidth="6"/><polygon points="30,30 70,30 50,70" fill="#475569"/><circle cx="50" cy="45" r="10" fill="#14b8a6"/></svg>);
+export const AssetCharVoid = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,10 95,30 50,90 5,30" fill="#171717" stroke="#4c1d95" strokeWidth="4"/><polygon points="50,25 75,40 50,75 25,40" fill="#3b0764"/><polygon points="45,35 55,35 50,55" fill="#a855f7" className="animate-pulse"/></svg>);
+export const AssetCharPrism = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="50,5 90,40 70,95 30,95 10,40" fill="#fbbf24" stroke="#78350f" strokeWidth="4"/><polygon points="50,20 75,45 60,80 40,80 25,45" fill="#fde047"/><circle cx="50" cy="50" r="15" fill="#ffffff" className="animate-spin-slow"/></svg>);
+export const AssetCharLotus = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M50 10 C 70 40 90 40 50 90 C 10 40 30 40 50 10 Z" fill="#db2777" stroke="#831843" strokeWidth="4"/><path d="M50 30 C 60 50 70 50 50 80 C 30 50 40 50 50 30 Z" fill="#fbcfe8"/><circle cx="50" cy="55" r="8" fill="#fdf2f8" className="animate-pulse"/></svg>);
 
-export const AssetCristalAether = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <circle cx="50" cy="50" r="35" fill="url(#glowCristal)" opacity="0.4"/>
-    <polygon points="50,10 75,40 50,90 25,40" fill="#2dd4bf" stroke="#042f2e" strokeWidth="3"/>
-    <polygon points="50,10 50,90 25,40" fill="#14b8a6" opacity="0.7"/>
-    <polygon points="50,10 75,40 50,50" fill="#5eead4" opacity="0.8"/>
-    <polygon points="45,25 50,15 50,45 45,45" fill="#ccfbf1" opacity="0.9"/>
-    <defs>
-      <radialGradient id="glowCristal">
-        <stop offset="0%" stopColor="#2dd4bf" />
-        <stop offset="100%" stopColor="transparent" />
-      </radialGradient>
-    </defs>
-  </svg>
+// --- 👾 INIMIGO (CORRUPÇÃO) ---
+export const AssetEnemyCorruption = ({ className = "w-full h-full", isBoss = false }) => (
+    <svg viewBox="0 0 100 100" className={className}>
+        <path d="M50 5 L80 25 L95 60 L70 95 L30 95 L5 60 L20 25 Z" fill={isBoss ? "#831843" : "#1e1b4b"} stroke={isBoss ? "#f43f5e" : "#7e22ce"} strokeWidth="4"/>
+        <path d="M40 30 L60 30 L70 60 L50 80 L30 60 Z" fill="#000000" opacity="0.6"/>
+        <circle cx="35" cy="45" r="5" fill={isBoss ? "#fbbf24" : "#f43f5e"} className="animate-pulse"/>
+        <circle cx="65" cy="45" r="5" fill={isBoss ? "#fbbf24" : "#f43f5e"} className="animate-pulse"/>
+        <path d="M40 70 Q 50 60 60 70" fill="none" stroke={isBoss ? "#fbbf24" : "#f43f5e"} strokeWidth="3"/>
+    </svg>
 );
 
-export const AssetFragmentoRunico = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <polygon points="20,30 50,10 80,30 85,70 50,90 15,70" fill="#334155" stroke="#0f172a" strokeWidth="4" strokeLinejoin="round"/>
-    <polygon points="20,30 50,10 50,90 15,70" fill="#1e293b" opacity="0.6"/>
-    <path d="M40 35 L60 35 L45 65 L65 65" fill="none" stroke="#2dd4bf" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse"/>
-    <circle cx="50" cy="50" r="3" fill="#ccfbf1" className="animate-ping" style={{ animationDuration: '3s' }}/>
-  </svg>
-);
+export const AssetRuneStone = ({ className = "w-full h-full" }) => (<svg viewBox="0 0 100 100" className={className}><polygon points="30,10 70,10 90,50 70,90 30,90 10,50" fill="#1e293b" stroke="#38bdf8" strokeWidth="4"/><path d="M40 30 L60 30 L50 50 L60 70 M40 70 L50 50" fill="none" stroke="#7dd3fc" strokeWidth="6" strokeLinecap="round" className="animate-pulse"/></svg>);
 
-export const AssetMusgo = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <path d="M15 60 Q 50 40 85 60 Q 90 85 50 90 Q 10 85 15 60 Z" fill="#064e3b" stroke="#022c22" strokeWidth="4"/>
-    <path d="M10 55 Q 30 30 50 45 T 90 55 Q 70 70 50 60 T 10 55 Z" fill="#059669" stroke="#065f46" strokeWidth="3"/>
-    <path d="M20 50 Q 30 40 40 55" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round"/>
-    <path d="M60 50 Q 70 40 80 55" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="30" cy="48" r="2" fill="#a7f3d0" className="animate-pulse"/>
-    <circle cx="70" cy="48" r="2" fill="#a7f3d0" className="animate-pulse" style={{ animationDelay: '1s' }}/>
-  </svg>
-);
-
-export const AssetNucleoGolem = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <circle cx="50" cy="50" r="40" fill="#022c22" stroke="#0f766e" strokeWidth="4"/>
-    <path d="M50 20 L60 40 L80 50 L60 60 L50 80 L40 60 L20 50 L40 40 Z" fill="#14b8a6"/>
-    <circle cx="50" cy="50" r="8" fill="#a855f7" className="animate-pulse"/>
-  </svg>
-);
-
-export const AssetSeloDefesa = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <path d="M20 20 L80 20 L80 50 C80 80 50 95 50 95 C50 95 20 80 20 50 Z" fill="#0f766e" stroke="#042f2e" strokeWidth="5" strokeLinejoin="round"/>
-    <path d="M30 30 L70 30 L50 80 Z" fill="#14b8a6"/>
-    <circle cx="50" cy="45" r="10" fill="#ccfbf1" className="animate-pulse"/>
-  </svg>
-);
-
-export const AssetReliquia = ({ className = "w-6 h-6" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <polygon points="50,10 80,30 80,70 50,90 20,70 20,30" fill="#1e1b4b" stroke="#7e22ce" strokeWidth="4"/>
-    <path d="M35 50 A 15 15 0 0 1 65 50" fill="none" stroke="#d8b4fe" strokeWidth="3"/>
-    <circle cx="50" cy="40" r="5" fill="#a855f7" className="animate-ping" style={{ animationDuration: '2.5s' }}/>
-    <polygon points="45,65 55,65 50,75" fill="#c084fc"/>
-  </svg>
-);
-
-// --- ELEMENTOS DO COMBATE ---
-
-export const AssetFire = ({ className = "w-4 h-4" }) => (
-  <svg viewBox="0 0 100 100" className={className}><path d="M50 10 C 80 40 80 70 50 90 C 20 70 20 40 50 10 Z" fill="#f97316"/></svg>
-);
-export const AssetWater = ({ className = "w-4 h-4" }) => (
-  <svg viewBox="0 0 100 100" className={className}><path d="M50 10 Q 80 50 80 75 A 30 30 0 1 1 20 75 Q 20 50 50 10 Z" fill="#0ea5e9"/></svg>
-);
-export const AssetEarthElem = ({ className = "w-4 h-4" }) => (
-  <svg viewBox="0 0 100 100" className={className}><polygon points="50,10 85,35 85,75 50,95 15,75 15,35" fill="#2dd4bf"/></svg>
-);
-export const AssetAir = ({ className = "w-4 h-4" }) => (
-  <svg viewBox="0 0 100 100" className={className}><circle cx="50" cy="50" r="30" fill="none" stroke="#c084fc" strokeWidth="12" strokeDasharray="15 10" className="animate-spin-slow"/></svg>
-);
-
-// --- CONSTRUÇÕES (CRYSTAL-PUNK) ---
-
-export const AssetTowerBuilding = ({ className = "w-20 h-20" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <path d="M30 90 L40 60 H60 L70 90 Z" fill="#115e59" stroke="#042f2e" strokeWidth="4"/>
-    <polygon points="50,10 35,60 65,60" fill="#0d9488" stroke="#042f2e" strokeWidth="3"/>
-    <path d="M48 25 L45 35 L52 35 L49 45" fill="none" stroke="#5eead4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse"/>
-    <circle cx="50" cy="55" r="4" fill="#a855f7" className="animate-pulse" />
-    <polygon points="50,0 47,5 50,10 53,5" fill="#c084fc">
-        <animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="0;-10;0" dur="0.8s" repeatCount="indefinite" />
-    </polygon>
-  </svg>
-);
-
-export const AssetCoreBuilding = ({ className = "w-24 h-24" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <path d="M10 85 Q 30 60 50 85 T 90 85 Q 70 95 50 95 T 10 85 Z" fill="#064e3b" stroke="#022c22" strokeWidth="3"/>
-    <path d="M30 85 Q 40 40 50 85 Q 60 40 70 85" fill="none" stroke="#064e3b" strokeWidth="5" strokeLinecap="round"/>
-    <polygon points="50,15 30,55 50,75 70,55" fill="#a855f7" stroke="#d8b4fe" strokeWidth="2" className="animate-pulse"/>
-    <polygon points="50,15 50,75 70,55" fill="#7e22ce" opacity="0.5"/>
-    <circle cx="50" cy="50" r="35" fill="none" stroke="#d8b4fe" strokeWidth="1" strokeDasharray="6 6" className="animate-spin-slow" opacity="0.6"/>
-  </svg>
-);
-
-export const AssetForcefieldBuilding = ({ className = "w-20 h-20" }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <path d="M35 90 Q 50 70 65 90 Z" fill="#115e59" stroke="#042f2e" strokeWidth="3"/>
-    <path d="M50 10 Q 90 30 85 70 Q 50 80 15 70 Q 10 30 50 10 Z" fill="#2dd4bf" opacity="0.2" stroke="#5eead4" strokeWidth="2" strokeDasharray="4 4"/>
-    <path d="M50 20 Q 75 35 70 65 Q 50 75 30 65 Q 25 35 50 20 Z" fill="#2dd4bf" opacity="0.3"/>
-    <circle cx="50" cy="50" r="8" fill="#5eead4" className="animate-pulse" />
-  </svg>
-);
+// --- CONSTRUÇÕES E ÍCONES UI ---
+export const AssetTowerBuilding = ({ className = "w-20 h-20" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M30 90 L40 60 H60 L70 90 Z" fill="#115e59" stroke="#042f2e" strokeWidth="4"/><polygon points="50,10 35,60 65,60" fill="#0d9488" stroke="#042f2e" strokeWidth="3"/><circle cx="50" cy="55" r="4" fill="#a855f7" className="animate-pulse" /></svg>);
+export const AssetCoreBuilding = ({ className = "w-24 h-24" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M10 85 Q 30 60 50 85 T 90 85 Q 70 95 50 95 T 10 85 Z" fill="#064e3b" stroke="#022c22" strokeWidth="3"/><polygon points="50,15 30,55 50,75 70,55" fill="#a855f7" stroke="#d8b4fe" strokeWidth="2" className="animate-pulse"/></svg>);
+export const AssetForcefieldBuilding = ({ className = "w-20 h-20" }) => (<svg viewBox="0 0 100 100" className={className}><path d="M35 90 Q 50 70 65 90 Z" fill="#115e59" stroke="#042f2e" strokeWidth="3"/><path d="M50 10 Q 90 30 85 70 Q 50 80 15 70 Q 10 30 50 10 Z" fill="#2dd4bf" opacity="0.2" stroke="#5eead4" strokeWidth="2" strokeDasharray="4 4"/></svg>);
+export const AssetCompass = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="50" cy="50" r="40" /><polygon points="50,20 60,50 50,80 40,50" fill="currentColor" opacity="0.5"/><polygon points="50,20 50,80 40,50" fill="currentColor"/></svg>);
+export const AssetSkull = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M20 40 Q 20 15 50 15 Q 80 15 80 40 Q 80 60 70 70 L 65 90 H 35 L 30 70 Q 20 60 20 40 Z" fill="currentColor" opacity="0.1"/><circle cx="35" cy="45" r="8" fill="currentColor"/><circle cx="65" cy="45" r="8" fill="currentColor"/><path d="M40 75 V 85 M50 75 V 85 M60 75 V 85" strokeWidth="4"/></svg>);
+export const AssetMapIcon = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="10,20 40,10 70,20 90,10 90,80 70,90 40,80 10,90" fill="currentColor" opacity="0.1"/><line x1="40" y1="10" x2="40" y2="80" /><line x1="70" y1="20" x2="70" y2="90" /></svg>);
+export const AssetShieldCheck = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M50 10 L 15 25 V 50 Q 15 80 50 95 Q 85 80 85 50 V 25 Z" fill="currentColor" opacity="0.1"/><path d="M35 55 L 45 65 L 70 40" strokeWidth="8"/></svg>);
+export const AssetClock = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.1"/><line x1="50" y1="50" x2="50" y2="25" strokeWidth="8"/><line x1="50" y1="50" x2="70" y2="50" strokeWidth="8"/></svg>);
+export const AssetSwords = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="25" y1="75" x2="75" y2="25" strokeWidth="8"/><line x1="25" y1="25" x2="75" y2="75" strokeWidth="8"/><circle cx="25" cy="75" r="5" fill="currentColor"/><circle cx="25" cy="25" r="5" fill="currentColor"/></svg>);
+export const AssetTarget = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="50" cy="50" r="40" opacity="0.5"/><circle cx="50" cy="50" r="20" fill="currentColor" opacity="0.2"/><circle cx="50" cy="50" r="5" fill="currentColor"/><line x1="50" y1="5" x2="50" y2="20" /><line x1="50" y1="95" x2="50" y2="80" /><line x1="5" y1="50" x2="20" y2="50" /><line x1="95" y1="50" x2="80" y2="50" /></svg>);
+export const AssetSparkles = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="currentColor" className={className}><path d="M50 10 Q 55 45 90 50 Q 55 55 50 90 Q 45 55 10 50 Q 45 45 50 10 Z" /><path d="M25 20 Q 28 35 40 38 Q 28 41 25 56 Q 22 41 10 38 Q 22 35 25 20 Z" opacity="0.7"/><path d="M80 70 Q 82 80 90 82 Q 82 84 80 94 Q 78 84 70 82 Q 78 80 80 70 Z" opacity="0.5"/></svg>);
+export const AssetArrowRight = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="20" y1="50" x2="80" y2="50" /><polyline points="60,30 80,50 60,70" /></svg>);
+export const AssetRotateCcw = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M 30 30 A 35 35 0 1 1 20 50" /><polyline points="15,15 30,30 50,20" /></svg>);
+export const AssetLayers = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="50,15 90,35 50,55 10,35" fill="currentColor" opacity="0.2"/><polyline points="10,55 50,75 90,55" /><polyline points="10,75 50,95 90,75" /></svg>);
+export const AssetBoxes = ({ className = "w-6 h-6" }) => (<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="50,15 85,30 85,70 50,85 15,70 15,30" /><polyline points="15,30 50,45 85,30" /><line x1="50" y1="45" x2="50" y2="85" /></svg>);
